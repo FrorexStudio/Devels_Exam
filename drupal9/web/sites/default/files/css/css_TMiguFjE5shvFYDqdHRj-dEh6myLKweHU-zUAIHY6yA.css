@@ -1,0 +1,2 @@
+*{margin:0;padding:0;box-sizing:border-box}body{font-size:18px;font-family:'Roboto',sans-serif}img{max-width:100%;height:auto}ul{list-style:none}a{text-decoration:none}.container{max-width:1200px;margin:0 auto}
+.header{background-size:cover;background-image:"/";width:100%;max-height:700px}.header .navbar{padding:30px;background-color:#fff}.header .navbar_block{display:flex;flex-direction:row}

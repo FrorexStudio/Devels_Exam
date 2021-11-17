@@ -1,0 +1,24 @@
+@import "variables";
+@import "mixin";
+@import "breakpoints";
+
+.footer {
+  @include Mobile {
+    padding: 85px 0;
+  }
+  background-color: $secondary;
+  padding: 185px 0;
+  color: $white;
+  .region-footer {
+    @include Mobile {
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

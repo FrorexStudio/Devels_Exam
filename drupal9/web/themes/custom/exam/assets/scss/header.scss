@@ -1,0 +1,144 @@
+@import "variables";
+@import "mixin";
+@import "breakpoints";
+
+.header {
+  @include Table {
+    padding-top: 0;
+    //min-height: 100%;
+    padding-bottom: 40px;
+    min-height: 100%;
+  }
+  @include Mobile {
+    padding-top: 0;
+    //min-height: 100%;
+    padding-bottom: 40px;
+    min-height: 100%;
+  }
+
+  padding-top: 40px;
+  background-image: url("../img/header.png");
+  min-height: 700px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .header_content {
+    @include Table {
+      text-align: center;
+      display: flex;
+      //padding-top: 0;
+      //padding-left: 0;
+      max-width: 500px;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 40px 0;
+    }
+    @include Mobile {
+      text-align: center;
+      display: flex;
+      //padding-top: 0;
+      //padding-left: 0;
+      max-width: 500px;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 40px 0;
+    }
+
+    line-height: 1;
+    padding-top: 135px;
+    padding-left: 115px;
+    max-width: 500px;
+    h1 {
+      font-size: 66px;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: $white;
+    }
+    h2 {
+      font-size: 42px;
+      color: #373645;
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+    p {
+      font-size: 18px;
+      color: $primary;
+    }
+  }
+
+}
+
+.region-main-menu {
+  @include Table {
+    flex-direction: column;
+    height: 100%;
+    padding: 0 0 20px 0;
+  }
+  @include Mobile {
+    flex-direction: column;
+    height: 100%;
+    padding: 0 0 20px 0;
+  }
+
+  display: flex;
+  flex-direction: row;
+  background-color: $white;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+  height: 115px;
+
+  .block-system-branding-block {
+    background-color: $secondary;
+    padding: 30px;
+    height: 100%;
+    @include sitebranding;
+    @include Table {
+      width: 100%;
+    }
+    @include Mobile {
+      width: 100%;
+    }
+  }
+}
+
+.menu {
+  @include Table {
+    //flex-direction: column;
+    flex-direction: row;
+    text-align: center;
+  }
+  @include Mobile {
+    flex-direction: column;
+    text-align: center;
+  }
+  display: flex;
+
+  li.menu-item {
+    &:not(:last-child) {
+      @include Table {
+        margin-right: 20px;
+      }
+      @include Mobile {
+        margin-right: 0px;
+      }
+      margin-right: 20px;
+    }
+    a {
+      color: $secondary;
+      text-transform: uppercase;
+      font-size: 16px;
+      &.is-active, &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+

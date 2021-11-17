@@ -1,0 +1,17 @@
+name: 'Exam'
+description: 'Exam sub-theme'
+type: theme
+core: 8.x
+base theme: false
+core_version_requirement: "^8 || ^9"
+package: other
+
+regions:
+  main_menu: "Main Menu"
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  footer: Footer
+
+libraries:
+  - 'exam/global'
