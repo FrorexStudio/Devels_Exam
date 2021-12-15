@@ -2,6 +2,7 @@
 @import "mixin";
 @import "breakpoints";
 
+
 div[id^="block-views-"], .block-views-blockarticle-home-block-1, .block-views-blockservices-block-1{
   //padding: 95px 0;
 
@@ -19,7 +20,7 @@ div[id^="block-views-"], .block-views-blockarticle-home-block-1, .block-views-bl
 }
 
 
-.contextual-region {
+//.contextual-region {
   .block-views {
     h2 {
       font-weight: bold;
@@ -49,7 +50,7 @@ div[id^="block-views-"], .block-views-blockarticle-home-block-1, .block-views-bl
         display: inline-block;
       }
     }
-  }
+  //}
 
   // our team
   .custom-team-article {
@@ -80,6 +81,74 @@ div[id^="block-views-"], .block-views-blockarticle-home-block-1, .block-views-bl
     }
   }
 
+
+  div[class~="custom-services"] {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 95px 0;
+    flex-wrap: wrap;
+
+    .views-row {
+      flex: 1 0 21%; /* explanation below */
+      @include Mobile {
+        flex: 1 0 100%;
+        //flex-direction: column;
+      }
+
+      .node__content {
+        text-align: center;
+
+        .block-field-blocknodeservices-contenttitle {
+          a{
+            font-size: 22px;
+            color: $secondary;
+          }
+        }
+
+        .block-extra-field-blocknodeservices-contentlinks {
+          .links {
+            a {
+              @include btn($primary);
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+
+  .block-views-block {
+    &services-contents-block-2 {
+      .custom-services {
+        display: block;
+      }
+    }
+    &projects-article-block-2 {
+      .custom-article {
+        display: block;
+
+        .views-row {
+          background-color: transparent;
+          -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0);
+          -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0);
+          box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0);
+          padding-bottom: 0px;
+          border-bottom: none;
+        }
+      }
+    }
+    &our-team-article-block-3 {
+      .custom-article {
+        display: block;
+      }
+    }
+  }
+
+
+
+
   div[class~="services-article"] {
     .block-extra-field-blocknodearticlelinks {
       .links {
@@ -92,6 +161,8 @@ div[id^="block-views-"], .block-views-blockarticle-home-block-1, .block-views-bl
       display: none;
     }
   }
+
+
   div[class~="projects-article"]{
     //display: flex;
     //flex-direction: row;
@@ -250,14 +321,15 @@ div[id^="block-views-"], .block-views-blockarticle-home-block-1, .block-views-bl
 
 
 
-.contextual-region .views-row article .layout--onecol .layout__region--content {
+//.contextual-region .views-row article .layout--onecol .layout__region--content {
+.views-row article .layout--onecol .layout__region--content {
   display: flex;
   flex-direction: column;
 }
 
 
 // about
-.block-views-blockabout-article-block-1 {
+.block-views-blockabout-article-block-1, #block-views-block-about-article-block-1 {
   .block-social-media-links-block {
     display: none;
   }
@@ -267,7 +339,8 @@ div[id^="block-views-"], .block-views-blockarticle-home-block-1, .block-views-bl
     padding: 20px 0;
     margin-bottom: 95px;
   }
-  .contextual-region .views-row article .layout--onecol .layout__region--content {
+  //.views-row article .layout--onecol .layout__region--content, .layout__region {
+  .views-row article .layout--onecol .layout__region--content {
     @include Mobile {
       flex-direction: column;
     }
@@ -309,13 +382,6 @@ div[id^="block-views-"], .block-views-blockarticle-home-block-1, .block-views-bl
   }
 }
 
-.block-views-blockservices-block-2 {
-  .contextual-region {
-    .custom-article{
-      display: block;
-    }
-  }
-}
 
 
 //.layout--twocol-section--25-75 {
@@ -330,116 +396,116 @@ div[id^="block-views-"], .block-views-blockarticle-home-block-1, .block-views-bl
   h2 {
     margin-bottom: 90px;
   }
-  .contextual-region {
+  //.contextual-region {
     //padding-top: 45px;
 
-    .custom-news-article {
-      @include Mobile {
+  .custom-news-article {
+    @include Mobile {
+      flex-direction: column;
+      justify-content: center;
+      //text-align: center;
+    }
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+
+    .views-row {
+      background-color: $white;
+      -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+      -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+      box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+      padding: 20px;
+
+      .layout__region--first {
+        flex: 0 1 15%;
+        //padding: 0 10px;
+        display: flex;
         flex-direction: column;
-        justify-content: center;
-        //text-align: center;
-      }
+        //align-items: center;
+        //justify-content: center;
+        text-align: center;
 
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 40px;
+        .block-field-blocknodenews-article {
 
-      .views-row {
-        background-color: $white;
-        -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
-        -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
-        box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
-        padding: 20px;
+          &field-date-news-update {
 
-        .layout__region--first {
-          flex: 0 1 15%;
-          //padding: 0 10px;
-          display: flex;
-          flex-direction: column;
-          //align-items: center;
-          //justify-content: center;
-          text-align: center;
-
-          .block-field-blocknodenews-article {
-
-            &field-date-news-update {
-
-              &:nth-child(1) {
-                .field--name-field-date-news-update {
-                  font-size: 24px;
-                  color: $secondary;
-                  text-transform: uppercase;
-                }
+            &:nth-child(1) {
+              .field--name-field-date-news-update {
+                font-size: 24px;
+                color: $secondary;
+                text-transform: uppercase;
               }
+            }
 
-              &:nth-child(2) {
-                .field--name-field-date-news-update {
-                  font-size: 36px;
-                  color: $primary;
-                  font-weight: bold;
-                  text-transform: uppercase;
-                }
+            &:nth-child(2) {
+              .field--name-field-date-news-update {
+                font-size: 36px;
+                color: $primary;
+                font-weight: bold;
+                text-transform: uppercase;
               }
+            }
 
-              &:nth-child(3) {
-                //float: left;
-                .field--name-field-date-news-update {
-                  font-size: 20px;
-                  color: $grey;
-                  font-weight: bold;
-                  text-transform: uppercase;
-                }
+            &:nth-child(3) {
+              //float: left;
+              .field--name-field-date-news-update {
+                font-size: 20px;
+                color: $grey;
+                font-weight: bold;
+                text-transform: uppercase;
               }
             }
           }
         }
-
-        .layout__region--second {
-          flex: 0 1 85%;
-          .block-field-blocknodenews-article {
-
-            &field-user-news {
-              float: left;
-
-              .form-no-label {
-                display: none;
-              }
-            }
-
-            &field-timestamp-news {
-              float: right;
-              font-size: 20px;
-              text-transform: uppercase;
-              color: $grey;
-            }
-
-            &field-title-news {
-              clear: both;
-              color: $secondary;
-              width: 100%;
-              font-size: 24px;
-              padding: 20px 0;
-              text-transform: uppercase;
-            }
-
-            &body {
-              text-transform: uppercase;
-              color: $secondary;
-              font-size: 16px;
-              padding-bottom: 20px;
-            }
-
-          }
-          .block-extra-field-blocknodenews-articlelinks {
-            text-align: right;
-          }
-        }
-
       }
+
+      .layout__region--second {
+        flex: 0 1 85%;
+        .block-field-blocknodenews-article {
+
+          &field-user-news {
+            float: left;
+
+            .form-no-label {
+              display: none;
+            }
+          }
+
+          &field-timestamp-news {
+            float: right;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: $grey;
+          }
+
+          &field-title-news {
+            clear: both;
+            color: $secondary;
+            width: 100%;
+            font-size: 24px;
+            padding: 20px 0;
+            text-transform: uppercase;
+          }
+
+          &body {
+            text-transform: uppercase;
+            color: $secondary;
+            font-size: 16px;
+            padding-bottom: 20px;
+          }
+
+        }
+        .block-extra-field-blocknodenews-articlelinks {
+          text-align: right;
+        }
+      }
+
     }
   }
 }
+//}
 
 
 // clients
@@ -448,7 +514,7 @@ div[id^="block-views-"], .block-views-blockarticle-home-block-1, .block-views-bl
     margin: 95px 0;
   }
 
-  .contextual-region {
+  //.contextual-region {
 
     .custom-clients-article {
       .views-row {
@@ -474,5 +540,48 @@ div[id^="block-views-"], .block-views-blockarticle-home-block-1, .block-views-bl
     }
 
   }
+//}
+
+
+.block-views-blockclient-owl-block-1 {
+
+  h2 {
+    margin-bottom: 90px;
+  }
+
+  padding-top: 45px;
+
+  .owl-item-inner {
+    display: flex;
+    justify-content: center;
+  }
 }
 
+
+.block-views-blockservices-contents-block-2 {
+  div[class~="custom-services"], .services-block {
+    display: block;
+  }
+}
+
+.block-views-blockprojects-article-block-2 {
+  div[class~="projects-article"] {
+    display: block;
+
+    .views-row {
+      border-bottom: none;
+      background-color: transparent;
+      -webkit-box-shadow: 0px 0px 0px 0px rgba(34, 60, 80, 0);
+      -moz-box-shadow: 0px 0px 0px 0px rgba(34, 60, 80, 0);
+      box-shadow: 0px 0px 0px 0px rgba(34, 60, 80, 0);
+      padding: 0px;
+    }
+
+  }
+}
+
+.block-views-blockour-team-article-block-3 {
+  div[class~="custom-article"] {
+    display: block;
+  }
+}

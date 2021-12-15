@@ -652,6 +652,15 @@
                 0 => '9.2.8',
             ),
         ),
+        'drupal/owlcarousel' => array(
+            'pretty_version' => '1.0.0-beta1',
+            'version' => '1.0.0.0-beta1',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/owlcarousel',
+            'aliases' => array(),
+            'reference' => '8.x-1.0-beta1',
+            'dev_requirement' => false,
+        ),
         'drupal/page_cache' => array(
             'dev_requirement' => false,
             'replaced' => array(
