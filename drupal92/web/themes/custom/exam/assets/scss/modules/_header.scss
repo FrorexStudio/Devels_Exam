@@ -1,0 +1,31 @@
+@import '../base/variables';
+@import '../base/mixins';
+@import '../base/breakpoints';
+
+.header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/header.png");
+  background-color: grey;
+  width: 100%;
+  height: 700px;
+  padding-top: 50px;
+
+  @include Desktop {
+    padding-top: 0px;
+  }
+}
+
+#block-sitebranding-2 {
+  background-color: $secondary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
+
+  @include Desktop {
+    width: 100%;
+  }
+}

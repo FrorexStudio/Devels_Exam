@@ -1,0 +1,10 @@
+name: 'Search API block'
+description: 'Provide a search block that can be used when using search API.'
+package: Search
+type: module
+core_version_requirement: ^8 || ^9
+
+# Information added by Drupal.org packaging script on 2021-09-21
+version: '1.0.0'
+project: 'search_api_block'
+datestamp: 1632241593

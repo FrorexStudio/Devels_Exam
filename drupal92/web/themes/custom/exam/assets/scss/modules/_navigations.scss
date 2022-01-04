@@ -1,0 +1,157 @@
+@import "../base/variables";
+@import "../base/mixins";
+@import "../base/breakpoints";
+
+.region-navigation {
+  background-color: $white;
+  height: 115px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include transition(.1s);
+
+  @include Desktop {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+    padding-bottom: 50px;
+  }
+
+  .menu {
+    display: flex;
+    height: 115px;
+    align-items: center;
+
+    @include Mobile {
+      flex-direction: column;
+      height: 100%;
+      padding: 15px;
+      margin-left: 0px;
+    }
+
+    @include Desktop {
+      height: 100%;
+      padding: 15px;
+    }
+
+    .menu-item {
+
+      &:not(:last-child) {
+        margin-right: 20px;
+
+        @include Mobile {
+          margin-right: 0;
+        }
+      }
+
+      a {
+
+        &[href="/"]{
+          color: transparent;
+          overflow: hidden;
+          background-image: url("../img/Homepage-menu.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 28px;
+
+          @include Mobile {
+            //width: 50px;
+            padding: 50px 0;
+          }
+        }
+        color: $secondary;
+        text-transform: uppercase;
+        font-size: 16px;
+        padding: 43px 0;
+        max-height: 100%;
+        height: 100%;
+
+        @include transition(.2s);
+
+        @include Desktop {
+          padding: 0;
+        }
+
+        &.is-active, &:hover {
+          color: $primary;
+          border-bottom: 5px solid $primary;
+          //padding: 40px 0;
+
+          @include Desktop {
+            border-bottom: none;
+          }
+
+          &[href="/"]{
+            color: transparent;
+            overflow: hidden;
+            background-image: url("../img/Homepage-menu.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 28px;
+
+            @include Desktop {
+              //width: 50px;
+              padding: 50px 0;
+            }
+
+            @include Mobile {
+              //width: 50px;
+              padding: 50px 0;
+            }
+          }
+        }
+
+        img {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+    }
+
+  }
+
+  .container-inline .form-actions{
+    padding: 0;
+    margin: 0;
+  }
+
+
+    // Search
+  #search-block-form, form-item{
+    input {
+      background-color: $white;
+      border: none;
+      border: 1px solid $grey;
+      padding: 10px;
+    }
+  }
+
+
+  #search-block-form {
+    @include Desktop {
+      padding: 0;
+    }
+    @include Table {
+      padding: 0;
+    }
+    @include Mobile {
+      padding: 0;
+    }
+    display: flex;
+    padding-right: 30px;
+  }
+
+
+  .form-item, .form-actions {
+    margin: 0;
+  }
+
+  ul.inline, ul.links.inline {
+    display: flex;
+    flex-direction: row;
+  }
+
+}

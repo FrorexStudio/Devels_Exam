@@ -1,0 +1,26 @@
+@import "../base/variables";
+@import "../base/mixins";
+@import "../base/breakpoints";
+
+.footer {
+  background-color: $secondary;
+  padding: 185px 0;
+  color: $white;
+
+  @include transition(.2s);
+
+  @include Mobile {
+    padding: 95px 0;
+  }
+}
+
+.region-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  @include Mobile {
+    flex-direction: column;
+  }
+}

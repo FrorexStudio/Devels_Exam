@@ -1,0 +1,66 @@
+@import "../base/variables";
+@import "../base/mixins";
+@import "../base/breakpoints";
+
+.block-webform-block {
+  form {
+    input {
+      background-color: $white;
+      border: none;
+      border: 1px solid $grey;
+      height: 40px;
+      padding: 10px;
+      width: 100%;
+    }
+
+    textarea {
+      background-color: $white;
+      border: none;
+      border: 1px solid $grey;
+      height: 140px;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .button--primary {
+      padding: 18px 32px;
+      height: auto;
+      max-width: 200px;
+      background-color: orangered;
+      color: $white;
+      border: none;
+    }
+  }
+}
+
+
+.node--type-contact {
+  padding: 50px 0;
+
+  .layout--twocol-section {
+    display: flex;
+    gap: 30px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    @include Desktop {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  .layout__region {
+    &--first {
+      width: 100%;
+    }
+    &--second {
+      width: 100%;
+    }
+  }
+
+  iframe {
+    width: 100%;
+  }
+}

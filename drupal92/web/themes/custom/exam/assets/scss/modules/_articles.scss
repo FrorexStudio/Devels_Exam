@@ -1,0 +1,296 @@
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/breakpoints";
+
+// About
+.custom-about {
+
+  h2 {
+    display: none;
+  }
+
+  .field--name-field-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $secondary;
+  }
+  .field--name-body {
+    color: $grey;
+    text-transform: uppercase;
+  }
+
+  .links a{
+    @include btn ($primary);
+  }
+
+  .views-row {
+    border-bottom: 5px solid $secondary;
+    border-top: 5px solid $primary;
+    padding: 30px 0;
+
+    .node__content {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+
+      @include Mobile {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Services
+.custom-services {
+
+  .owl-item {
+    padding: 0 15px;
+
+    div {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .links a{
+    @include btn ($primary);
+  }
+
+  .views-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .services-body {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $grey;
+  }
+
+  .services-media {
+    width: auto;
+    height: 115px;
+  }
+
+}
+
+
+// Projects
+.custom-projects {
+  //.views-row {
+  //  display: flex;
+  //  flex-direction: row;
+  //  gap: 15px;
+  //  flex-wrap: wrap;
+  //
+  //  @include Desktop {
+  //    flex: 1 50%;
+  //  }
+  //}
+
+  .views-col {
+    width: 100%;
+    display: block;
+    //flex-direction: column;
+    background-color: $white;
+    text-align: center;
+    border-bottom: 3px solid $secondary;
+
+    div:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    div:last-child {
+      margin-bottom: 30px;
+    }
+  }
+  .projects-media img{
+    width: 100%;
+  }
+
+  //.node-taxonomy {
+  //  font-size: 16px;
+  //  text-transform: uppercase;
+  //  font-weight: bold;
+  //}
+
+  .projects-taxonomy {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .view-content {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    .views-row {
+      display: flex;
+      //display: block;
+      flex-direction: column;
+      //text-align: center;
+      width: 100%;
+      background-color: $white;
+      //padding: 15px;
+      text-align: center;
+      border-bottom: 3px solid $secondary;
+      padding-bottom: 30px;
+      flex: 1 20%;
+
+      @include Desktop {
+        flex: 1 40%;
+      }
+
+      @include Mobile {
+        flex: 1 100%;
+      }
+
+      .views-field {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+
+
+}
+
+
+// Team
+.custom-team {
+  text-align: center;
+  padding: 15px 0;
+
+  .node__content {
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .layout {
+
+    &__region--content {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .block-layout-builder {
+      .layout__region {
+        .container {
+          padding: 0 15px;
+        }
+      }
+
+    }
+
+
+    .block-field {
+      &-blocknodeteamfield-social-team {
+
+        //.container {
+        //  display: flex;
+        //  justify-content: center;
+        //}
+
+        .social-media-links--platforms {
+        }
+      }
+    }
+
+  }
+
+
+}
+
+
+// News
+.custom-news {
+  .view-content {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    //align-items: center;
+
+    @include Table {
+      flex-direction: column;
+    }
+  }
+
+  .views-row {
+    background-color: $white;
+    padding: 30px;
+  }
+
+  .block-news {
+
+    &__author {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__link {
+      float: right;
+    }
+
+    &__wrapper {
+      display: flex;
+      gap: 10px;
+    }
+
+    &__time {
+      padding: 15px;
+    }
+
+  }
+
+
+  .view-filters {
+    label{
+      display: none;
+    }
+
+    .form--inline {
+      display: flex;
+
+    }
+    // search
+    input {
+      background-color: $white;
+      border: none;
+      border: 1px solid $grey;
+      height: 40px;
+      max-width: 440px;
+      width: 100%;
+    }
+    input[type="submit"] {
+      padding: 10px;
+      max-width: 220px;
+      //height: 40px;
+      background-color: $primary;
+      color: $white;
+      border: 1px solid $primary;
+    }
+  }
+}
+
+
+
+// Clients
+.custom-clients {
+  .node-title {
+    display: none;
+  }
+}
