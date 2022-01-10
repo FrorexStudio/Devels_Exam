@@ -131,6 +131,8 @@ a[href="/taxonomy/term/1"] {
   font-weight: bold;
   text-transform: uppercase;
   color: $secondary;
+  max-width: 300px;
+  display: inline-block;
 }
 
 
@@ -197,9 +199,11 @@ a[href="/taxonomy/term/1"] {
   align-items: center;
   width: 100%;
   display: flex;
+  margin-top: 45px;
   &__items {
     display: flex;
     flex-direction: row;
+    align-items: center;
     .pager__item {
       a {
         color: grey;
@@ -236,4 +240,10 @@ a[href="/taxonomy/term/1"] {
     display: none;
   }
   float: right;
+}
+
+// margins
+
+.mb-2 {
+  margin-bottom: 20px;
 }

@@ -1,25 +1,43 @@
 <div class="block-news__wrapper">
+
   <div class="block-news__time">
     {{ fields.created_1.content }}
   </div>
-  {#  <div class="block-news__author d-flex justify-content-between">#}
+
   <div class="block-news__contents">
-    <div class="block-news__author">
-      <div>
-        {{ fields.user.user.content }}
-        <span class="align-top px-1">
-        <span class="text-gray">WRITER</span>
-        <span class="block-news__name">{{ fields.field_first_name.content }} / </span>
-        {#  class="block-news__name">{{ fields.field_first_name.content }} {{ fields.field_last_name.content }} / </span>#}
-        <span class="text-blue">{{ fields.field_position.content }}</span>
-      </span>
+
+    <div class="block-news__author mb-2">
+
+      <div class="block-news__author-content">
+        <div class="block-news__img">
+          {{ fields.uid.content }}
+        </div>
+
+        <div class="block-news__writer">
+          <span class="text-gray">WRITER</span>
+          <span class="block-news__name">{{ fields.uid_1.content }} / </span>
+          <span class="text-blue">{{ fields.field_taxonomy_news.content }}</span>
+        </div>
       </div>
+
       <div class="block-news__ago">{{ fields.created.content }}</div>
+
     </div>
+
     <div class="block-news__content">
-      <h2>{{ fields.title.content }}</h2>
-      {{ fields.body.content }}
-      <div class="block-news__link custom-news links news-link"><span>{{ fields.view_node.content }}</span></div>
+      <h2 class="news-title">{{ fields.title.content }}</h2>
+
+      <div class="news-content mb-2">
+        {{ fields.body.content }}
+      </div>
+
+      <div class="block-news__link custom-news links news-link">
+        <span>{{ fields.view_node.content }}</span>
+      </div>
+
     </div>
+
+
+
   </div>
 </div>
